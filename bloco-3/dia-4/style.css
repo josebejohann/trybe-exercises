@@ -1,0 +1,52 @@
+header {
+  text-align: center;
+}
+
+header nav a {
+  margin-right: 10px;
+}
+
+main section.general-infos {
+  margin-bottom: 60px;
+}
+
+main section.general-infos table {
+  margin-top: 20px;
+}
+
+main section.general-infos table tr td {
+  padding-right: 20px;
+}
+
+main section.general-infos table tr th {
+  padding-right: 20px;
+}
+
+main aside {
+  float: right;
+
+  width: 15%;
+  height: 175px;
+  margin: 15px;
+  padding: 10px;
+
+  background-color: #ECECEC;
+  text-align: center;
+}
+
+main article {
+  margin-bottom: 15px;
+}
+
+main article img {
+  float: left;
+  margin-right: 15px;
+}
+
+main article p {
+  height: 200px;
+}
+
+main section.references {
+  margin: 120px 0;
+}
