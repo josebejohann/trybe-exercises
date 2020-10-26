@@ -1,0 +1,38 @@
+body {
+  font-size: 16px;
+}
+
+h1 {
+  font-family: Tahoma;
+  font-size: 65px;
+  font-weight: 600;
+  font-style: bold;
+  text-align: center;
+  background-color: orange;
+}
+
+p {
+  font-size: 3rem;
+  text-decoration: underline;
+  line-height: 1;
+}
+
+ul {
+  background-color: gray;
+}
+
+.styled-background-color {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.red {
+  background-color: red;
+}
+
+.brown {
+  background-color: brown;
+}
