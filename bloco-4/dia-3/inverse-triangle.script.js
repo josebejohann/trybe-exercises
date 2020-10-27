@@ -1,9 +1,8 @@
 let n = 5;
-let inverseTriangle = '';
 
 if (n > 1) {
   for (i = 1; i <= n; i++) {
-    inverseTriangle = '';
+    let inverseTriangle = '';
 
     for (j = n; j > i; j--) {
       inverseTriangle += ' ';

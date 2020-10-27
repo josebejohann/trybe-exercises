@@ -1,5 +1,4 @@
 let n = 5;
-let pyramid = '';
 
 if (n > 1) {
   for (i = 1; i <= Math.ceil(n / 2); i++) {
