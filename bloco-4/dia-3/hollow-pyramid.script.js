@@ -1,7 +1,7 @@
 let n = 8;
 
 if (n > 1) {
-  for (j = 1; j <= Math.ceil(n / 2); j += 1) {
+  for (j = 1; j <= Math.ceil(n / 2); j++) {
     let hollowPyramid = '';
 
     if (j < Math.ceil(n / 2)) {
