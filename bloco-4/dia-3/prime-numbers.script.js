@@ -1,4 +1,4 @@
-let n = 0;
+let n = 7;
 let d = 0;
 
 if (n >= 0) {

@@ -1,9 +1,10 @@
 let n = 5;
 let j = '';
 
-for (i = 0; i < n; i++) {
-  if (n > 1) {
+if (n > 1) {
+  for (i = 0; i < n; i++) {
     j += '*';
+
     console.log(j);
   }
 }
