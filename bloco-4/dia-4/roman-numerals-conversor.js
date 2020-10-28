@@ -14,7 +14,7 @@ function handleRomanNumeralsConversor(string) {
   let sum = 0;
 
   for (i = 0; i < string.length; i++) {
-    result = integers[string[i]];
+    let result = integers[string[i]];
 
     if (i + 1 < string.length && integers[string[i + 1]] > result) {
       sum -= result;
