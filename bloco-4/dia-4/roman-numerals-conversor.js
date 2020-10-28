@@ -26,4 +26,4 @@ function handleRomanNumeralsConversor(string) {
   console.log(sum);
 }
 
-handleRomanNumeralsConversor('mcmxcviii');
+handleRomanNumeralsConversor('iii');
