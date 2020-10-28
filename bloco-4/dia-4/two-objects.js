@@ -16,6 +16,6 @@ for (i in info) {
   if (i !== 'recorrente') {
     console.log(`${info[i]} e ${anotherInfo[i]}`);
   } else {
-    console.log('Ambos reocorrentes');
+    console.log('Ambos recorrentes');
   }
 }

@@ -9,7 +9,9 @@ function handleArray(array) {
     }
   }
 
-  return `The lowest number is ${lower} and its position in the array is ${index}.`;
+  console.log(
+    `The lowest number is ${lower} and its position in the array is ${index}.`
+  );
 }
 
-console.log(handleArray([2, 4, 6, 7, 10, 0, -3]));
+handleArray([2, 4, 6, 7, 10, 0, -3]);

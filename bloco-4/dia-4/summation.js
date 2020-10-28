@@ -7,7 +7,7 @@ function handleSummation(integer) {
     integer--;
   }
 
-  return sum;
+  console.log(sum);
 }
 
-console.log(handleSummation(5));
+handleSummation(5);

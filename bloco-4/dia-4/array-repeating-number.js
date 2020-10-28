@@ -17,7 +17,7 @@ function handleRepeatingNumber(array) {
     }
   }
 
-  return `Number ${number} is the most repeated.`;
+  console.log(`Number ${number} is the most repeated.`);
 }
 
-console.log(handleRepeatingNumber([2, 3, 2, 5, 8, 2, 3]));
+handleRepeatingNumber([2, 3, 2, 5, 8, 2, 3]);

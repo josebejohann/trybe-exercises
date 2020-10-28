@@ -7,9 +7,7 @@ function handleArrayNames(array) {
     }
   }
 
-  return name;
+  console.log(name);
 }
 
-console.log(
-  handleArrayNames(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'])
-);
+handleArrayNames(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']);

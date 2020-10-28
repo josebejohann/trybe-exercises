@@ -9,7 +9,9 @@ function handleArray(array) {
     }
   }
 
-  return `The highest number is ${higher} and its position in the array is ${index}.`;
+  console.log(
+    `The highest number is ${higher} and its position in the array is ${index}.`
+  );
 }
 
-console.log(handleArray([2, 3, 6, 7, 10, 1]));
+handleArray([2, 3, 6, 7, 10, 1]);
