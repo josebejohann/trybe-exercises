@@ -49,7 +49,10 @@
 
       document.getElementsByClassName('center-content')[0].style.textTransform = 'uppercase';
 
-      console.log(document.getElementsByTagName('p'));
+      for (i = 0; i < 3; i++) {
+        console.log(document.getElementsByTagName('p')[i]);
+      }
+
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
