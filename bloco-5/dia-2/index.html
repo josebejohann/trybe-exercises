@@ -87,6 +87,19 @@
       image.src = 'https://picsum.photos/200';
 
       thirdDiv.appendChild(image).className = 'small-image';
+
+      let ul = document.createElement('ul');
+
+      fourthDiv.appendChild(ul);
+
+      for (i = 1; i < 11; i++) {
+        let item = i;
+        
+        let li = document.createElement('li');
+        li.innerText = item;
+
+        ul.appendChild(li);
+      }
     </script>
   </body>
 </html>
