@@ -38,3 +38,14 @@ function createDecemberCalendar() {
 }
 
 createDecemberCalendar();
+
+function handleHolidays(string) {
+  const buttonsContainer = document.querySelector('.buttons-container');
+  const holidaysButton = document.createElement('button');
+  holidaysButton.id = 'btn-holiday';
+  holidaysButton.innerText = string;
+
+  buttonsContainer.appendChild(holidaysButton);
+}
+
+handleHolidays('Feriados');
