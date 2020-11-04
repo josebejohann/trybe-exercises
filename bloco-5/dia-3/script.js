@@ -73,3 +73,14 @@ function handleHolidaysBackgroundColorChange() {
 }
 
 handleHolidaysBackgroundColorChange();
+
+function handleFridays(string) {
+  const buttonsContainer = document.querySelector('.buttons-container');
+  const fridaysButton = document.createElement('button');
+  fridaysButton.id = 'btn-friday';
+  fridaysButton.innerText = string;
+
+  buttonsContainer.appendChild(fridaysButton);
+}
+
+handleFridays('Sexta-feira');
