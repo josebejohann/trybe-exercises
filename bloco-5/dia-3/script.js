@@ -84,3 +84,19 @@ function handleFridays(string) {
 }
 
 handleFridays('Sexta-feira');
+
+function handleFridaysText() {
+  const fridays = document.querySelectorAll('.friday');
+
+  for (i = 0; i < fridays.length; i++) {
+    fridays[i].innerHTML = 'SEXTOU!';
+  }
+}
+
+function handleFridaysTextChange() {
+  const fridaysButton = document.querySelector('#btn-friday');
+
+  fridaysButton.addEventListener('click', handleFridaysText);
+}
+
+handleFridaysTextChange();
