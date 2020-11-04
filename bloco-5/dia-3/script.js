@@ -49,3 +49,27 @@ function handleHolidays(string) {
 }
 
 handleHolidays('Feriados');
+
+function handleHolidaysBackgroundColor() {
+  const holidays = document.querySelectorAll('.holiday');
+
+  for (i = 0; i < holidays.length; i++) {
+    holidays[i].style.backgroundColor = 'rgb(255,255,255)';
+  }
+}
+
+function handleHolidaysOriginalBackgroundColor() {
+  const holidays = document.querySelectorAll('.holiday');
+
+  for (i = 0; i < holidays.length; i++) {
+    holidays[i].style.backgroundColor = 'rgb(238,238,238)';
+  }
+}
+
+function handleHolidaysBackgroundColorChange() {
+  const holidaysButton = document.querySelector('#btn-holiday');
+
+  holidaysButton.addEventListener('click', handleHolidaysBackgroundColor);
+}
+
+handleHolidaysBackgroundColorChange();
