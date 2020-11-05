@@ -164,3 +164,26 @@ function handleSelectedTasks() {
 }
 
 handleSelectedTasks();
+
+
+function calendarTasks(event) {
+  const selectedTask = document.querySelector('.task.selected');
+
+  if (selectedTask === null) {
+    alert('Nenhuma tarefa selecionada!');
+
+    return;
+  }
+
+  event.target.style.backgroundColor = selectedTask.style.backgroundColor;
+}
+
+function handleCalendarTasks() {
+  const day = document.querySelectorAll('.days');
+
+  for (i = 0; i < day.length; i++) {
+    day[i].addEventListener('click', calendarTasks);
+  }
+}
+
+handleCalendarTasks();
