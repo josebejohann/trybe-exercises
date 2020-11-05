@@ -100,3 +100,30 @@ function handleFridaysTextChange() {
 }
 
 handleFridaysTextChange();
+
+function handleFontSize(event) {
+  event.target.style.fontSize = '36px';
+}
+
+function handleOriginalFontSize(event) {
+  event.target.style.fontSize = '20px';
+}
+
+function handleZoomText() {
+  const days = document.querySelectorAll('#days');
+  
+  for (i = 0; i < days.length; i++) {
+    days[i].addEventListener('mouseover', handleFontSize);
+  }
+}
+
+function handleOriginalZoomText() {
+  const days = document.querySelectorAll('#days');
+  
+  for (i = 0; i < days.length; i++) {
+    days[i].addEventListener('mouseout', handleOriginalFontSize);
+  }
+}
+
+handleZoomText();
+handleOriginalZoomText();
