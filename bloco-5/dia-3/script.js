@@ -141,3 +141,14 @@ function createTasks(string) {
 }
 
 createTasks('cozinhar');
+
+function handleTasksBackgroundColor(string) {
+  const div = document.querySelector('.my-tasks');
+  const divTask = document.createElement('div');
+  divTask.className = 'task';
+  divTask.style.backgroundColor = string;
+
+  div.appendChild(divTask);
+}
+
+handleTasksBackgroundColor('rgb(238,238,238)');
