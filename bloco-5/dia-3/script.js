@@ -140,7 +140,7 @@ function createTasks(string) {
   div.appendChild(tasks);
 }
 
-createTasks('cozinhar');
+createTasks('lavar as roupas');
 
 function handleTasksBackgroundColor(string) {
   const div = document.querySelector('.my-tasks');
@@ -151,4 +151,16 @@ function handleTasksBackgroundColor(string) {
   div.appendChild(divTask);
 }
 
-handleTasksBackgroundColor('rgb(238,238,238)');
+handleTasksBackgroundColor('cyan');
+
+function selectedTasks(event) {
+  event.target.className = 'task selected';
+}
+
+function handleSelectedTasks() {
+  const div = document.querySelector('.task');
+
+  div.addEventListener('click', selectedTasks);
+}
+
+handleSelectedTasks();
