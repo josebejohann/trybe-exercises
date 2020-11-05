@@ -50,7 +50,11 @@ function handleHolidays(string) {
 
 handleHolidays('Feriados');
 
+let newBackgroundColor = false;
+
 function handleHolidaysBackgroundColor() {
+  newBackgroundColor = true;
+
   const holidays = document.querySelectorAll('.holiday');
 
   for (i = 0; i < holidays.length; i++) {
@@ -59,6 +63,8 @@ function handleHolidaysBackgroundColor() {
 }
 
 function handleHolidaysOriginalBackgroundColor() {
+  newBackgroundColor = false;
+
   const holidays = document.querySelectorAll('.holiday');
 
   for (i = 0; i < holidays.length; i++) {
@@ -67,9 +73,15 @@ function handleHolidaysOriginalBackgroundColor() {
 }
 
 function handleHolidaysBackgroundColorChange() {
+  newBackgroundColor = false;
+
   const holidaysButton = document.querySelector('#btn-holiday');
 
-  holidaysButton.addEventListener('click', handleHolidaysBackgroundColor);
+  if (newBackgroundColor === false) {
+    holidaysButton.addEventListener('click', handleHolidaysBackgroundColor);
+  } else if (newBackgroundColor === true) {
+    holidaysButton.addEventListener('click', handleHolidaysOriginalBackgroundColor);
+  }
 }
 
 handleHolidaysBackgroundColorChange();
@@ -114,16 +126,18 @@ function handleZoomText() {
   
   for (i = 0; i < days.length; i++) {
     days[i].addEventListener('mouseover', handleFontSize);
-  }
-}
-
-function handleOriginalZoomText() {
-  const days = document.querySelectorAll('#days');
-  
-  for (i = 0; i < days.length; i++) {
     days[i].addEventListener('mouseout', handleOriginalFontSize);
   }
 }
 
 handleZoomText();
-handleOriginalZoomText();
+
+function createTasks(string) {
+  const div = document.querySelector('.my-tasks');
+  const tasks = document.createElement('span');
+  tasks.innerText = string;
+
+  div.appendChild(tasks);
+}
+
+createTasks('cozinhar');
