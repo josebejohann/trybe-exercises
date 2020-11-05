@@ -13,8 +13,6 @@ function createDaysOfTheWeek() {
 
 createDaysOfTheWeek();
 
-// Escreva seu código abaixo.
-
 function createDecemberCalendar() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   const daysList = document.querySelector('#days');
@@ -50,11 +48,7 @@ function handleHolidays(string) {
 
 handleHolidays('Feriados');
 
-let newBackgroundColor = false;
-
 function handleHolidaysBackgroundColor() {
-  newBackgroundColor = true;
-
   const holidays = document.querySelectorAll('.holiday');
 
   for (i = 0; i < holidays.length; i++) {
@@ -62,26 +56,26 @@ function handleHolidaysBackgroundColor() {
   }
 }
 
-function handleHolidaysOriginalBackgroundColor() {
-  newBackgroundColor = false;
+let newBackgroundColor = false;
 
-  const holidays = document.querySelectorAll('.holiday');
+function handleHolidaysBackgroundColor() {
+  newBackgroundColor = !newBackgroundColor;
 
+  let holidays = document.querySelectorAll('.holiday');
+  
   for (i = 0; i < holidays.length; i++) {
-    holidays[i].style.backgroundColor = 'rgb(238,238,238)';
+    if (newBackgroundColor) {
+      holidays[i].style.backgroundColor = 'rgba(255,255,255,0.6)';
+    } else {
+      holidays[i].style.backgroundColor = 'rgb(238,238,238)';
+    }
   }
 }
 
 function handleHolidaysBackgroundColorChange() {
-  newBackgroundColor = false;
-
   const holidaysButton = document.querySelector('#btn-holiday');
 
-  if (newBackgroundColor === false) {
-    holidaysButton.addEventListener('click', handleHolidaysBackgroundColor);
-  } else if (newBackgroundColor === true) {
-    holidaysButton.addEventListener('click', handleHolidaysOriginalBackgroundColor);
-  }
+  holidaysButton.addEventListener('click', handleHolidaysBackgroundColor);
 }
 
 handleHolidaysBackgroundColorChange();
@@ -114,15 +108,15 @@ function handleFridaysTextChange() {
 handleFridaysTextChange();
 
 function handleFontSize(event) {
-  event.target.style.fontSize = '36px';
+  event.target.style.transform = 'scale(1.5)';
 }
 
 function handleOriginalFontSize(event) {
-  event.target.style.fontSize = '20px';
+  event.target.style.transform = 'scale(1)';
 }
 
 function handleZoomText() {
-  const days = document.querySelectorAll('.days');
+  const days = document.querySelectorAll('li');
   
   for (i = 0; i < days.length; i++) {
     days[i].addEventListener('mouseover', handleFontSize);

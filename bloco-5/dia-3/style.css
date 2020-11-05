@@ -36,6 +36,10 @@ button {
   width: 13.6%;
 }
 
+#days li.day.holiday {
+  background-color: rgb(238, 238, 238);
+}
+
 .input-container {
   width: 49%;
   height: 100px;
