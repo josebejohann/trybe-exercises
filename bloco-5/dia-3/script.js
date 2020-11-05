@@ -148,7 +148,11 @@ function handleTasksBackgroundColor(string) {
 handleTasksBackgroundColor('yellow');
 
 function selectedTasks(event) {
-  event.target.className = 'task selected';
+  if (event.target.className != 'task selected') {
+    event.target.className = 'task selected';
+  } else {
+    event.target.className = 'task';
+  }
 }
 
 function handleSelectedTasks() {
