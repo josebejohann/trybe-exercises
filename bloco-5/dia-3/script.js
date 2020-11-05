@@ -134,7 +134,7 @@ function createTasks(string) {
   div.appendChild(tasks);
 }
 
-createTasks('lavar as roupas');
+createTasks('entregar o projeto');
 
 function handleTasksBackgroundColor(string) {
   const div = document.querySelector('.my-tasks');
@@ -145,7 +145,7 @@ function handleTasksBackgroundColor(string) {
   div.appendChild(divTask);
 }
 
-handleTasksBackgroundColor('cyan');
+handleTasksBackgroundColor('yellow');
 
 function selectedTasks(event) {
   event.target.className = 'task selected';
@@ -159,7 +159,6 @@ function handleSelectedTasks() {
 
 handleSelectedTasks();
 
-
 function calendarTasks(event) {
   const selectedTask = document.querySelector('.task.selected');
 
@@ -169,7 +168,11 @@ function calendarTasks(event) {
     return;
   }
 
-  event.target.style.backgroundColor = selectedTask.style.backgroundColor;
+  if (event.target.style.backgroundColor != selectedTask.style.backgroundColor) {
+    event.target.style.backgroundColor = selectedTask.style.backgroundColor;
+  } else {
+    event.target.style.backgroundColor = '';
+  }
 }
 
 function handleCalendarTasks() {
