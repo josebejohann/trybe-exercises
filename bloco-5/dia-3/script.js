@@ -122,7 +122,7 @@ function handleOriginalFontSize(event) {
 }
 
 function handleZoomText() {
-  const days = document.querySelectorAll('#days');
+  const days = document.querySelectorAll('.days');
   
   for (i = 0; i < days.length; i++) {
     days[i].addEventListener('mouseover', handleFontSize);
