@@ -187,3 +187,42 @@ function handleCalendarTasks() {
 }
 
 handleCalendarTasks();
+
+function createCommitmentsList() {
+  const div = document.querySelector('.input-container');
+  const ul = document.createElement('ul');
+  ul.className = 'commitments-list';
+
+  div.appendChild(ul);
+}
+
+createCommitmentsList();
+
+function addCommitmentsItems(e) {
+  e.preventDefault();
+
+  const ul = document.querySelector('.commitments-list');
+  const input = document.getElementById('task-input');
+  console.log(input.value)
+
+  if (input.value === "") {
+    alert('Por favor, adicione um compromisso!')
+
+    return;
+  }
+
+  const li = document.createElement('li');
+  li.className = 'commitments-item';
+
+  li.appendChild(document.createTextNode(input.value));
+
+  ul.appendChild(li);
+}
+
+function submitItemButton() {
+  const form = document.getElementById('form-commitments');
+
+  form.addEventListener('submit', addCommitmentsItems);
+}
+
+submitItemButton();
