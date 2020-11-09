@@ -1,41 +1,41 @@
 const text = document.querySelectorAll('.text');
 
+document.body.style.color = localStorage.getItem('textColor');
+document.body.style.backgroundColor = localStorage.getItem('backgroundColor');
+document.body.style.fontSize = localStorage.getItem('fontSize');
+document.body.style.lineHeight = localStorage.getItem('lineHeight');
+document.body.style.fontFamily = localStorage.getItem('fontFamily');
+
 let changeBackgroundColor = (color) => {
   let backgroundColor = color.options[color.selectedIndex].value;
 
   document.body.style.backgroundColor = backgroundColor;
 
-  localStorage.setItem('background-color', color);
+  localStorage.setItem('backgroundColor', JSON.stringify(color));
 };
 
 let changeFontColor = (color) => {
   let textColor = color.options[color.selectedIndex].value;
 
-  for (i of text) {
-    i.style.color = textColor;
-  }
+  document.body.style.color = textColor;
 
-  localStorage.setItem('color', color);
+  localStorage.setItem('textColor', JSON.stringify(color));
 };
 
 let changeFontSize = (size) => {
   let fontSize = size.options[size.selectedIndex].value;
 
-  for (i of text) {
-    i.style.fontSize = fontSize;
-  }
+  document.body.style.fontSize = fontSize;
 
-  localStorage.setItem('font-size', size);
+  localStorage.setItem('fontSize', JSON.stringify(size));
 };
 
 let changeLineHeight = (height) => {
   let lineHeight = height.options[height.selectedIndex].value;
 
-  for (i of text) {
-    i.style.lineHeight = lineHeight;
-  }
+  document.body.style.lineHeight = lineHeight;
 
-  localStorage.setItem('line-height', height);
+  localStorage.setItem('lineHeight', JSON.stringify(height));
 };
 
 let changeFontFamily = (family) => {
@@ -43,5 +43,5 @@ let changeFontFamily = (family) => {
 
   document.body.style.fontFamily = fontFamily;
 
-  localStorage.setItem('font-family', family);
+  localStorage.setItem('fontFamily', JSON.stringify(family));
 };
