@@ -8,10 +8,11 @@ document.body.style.fontFamily = localStorage.getItem('fontFamily');
 
 let changeBackgroundColor = (color) => {
   let backgroundColor = color.options[color.selectedIndex].value;
+  console.log(color.options[color.selectedIndex].value);
 
   document.body.style.backgroundColor = backgroundColor;
 
-  localStorage.setItem('backgroundColor', JSON.stringify(color));
+  localStorage.setItem('backgroundColor', backgroundColor);
 };
 
 let changeFontColor = (color) => {
@@ -19,7 +20,7 @@ let changeFontColor = (color) => {
 
   document.body.style.color = textColor;
 
-  localStorage.setItem('textColor', JSON.stringify(color));
+  localStorage.setItem('textColor', textColor);
 };
 
 let changeFontSize = (size) => {
@@ -27,7 +28,7 @@ let changeFontSize = (size) => {
 
   document.body.style.fontSize = fontSize;
 
-  localStorage.setItem('fontSize', JSON.stringify(size));
+  localStorage.setItem('fontSize', fontSize);
 };
 
 let changeLineHeight = (height) => {
@@ -35,7 +36,7 @@ let changeLineHeight = (height) => {
 
   document.body.style.lineHeight = lineHeight;
 
-  localStorage.setItem('lineHeight', JSON.stringify(height));
+  localStorage.setItem('lineHeight', lineHeight);
 };
 
 let changeFontFamily = (family) => {
@@ -43,5 +44,5 @@ let changeFontFamily = (family) => {
 
   document.body.style.fontFamily = fontFamily;
 
-  localStorage.setItem('fontFamily', JSON.stringify(family));
+  localStorage.setItem('fontFamily', fontFamily);
 };
