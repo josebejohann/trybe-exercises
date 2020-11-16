@@ -1,4 +1,4 @@
 let pessoaEstudante = "euMesmo";
-lelet habilidadesPessoaEstudante = 10;
-//Eu sou Tryber e...
+let habilidadesPessoaEstudante = 10;
+//Vou ter muito sucesso na programação!
 console.log("sucesso");
