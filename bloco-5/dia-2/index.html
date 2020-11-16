@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let body = document.querySelector('body');
+
+      let text = document.createElement('h1'); 
+      
+      body.appendChild(text).innerText = 'Exercício 5.2 - JavaScript DOM';
+
+      let firstDiv = document.createElement('div');
+
+      body.appendChild(firstDiv).className = 'main-content';
+
+      let secondDiv = document.createElement('div');
+
+      firstDiv.appendChild(secondDiv).className = 'center-content';
+
+      let p = document.createElement('p');
+
+      secondDiv.appendChild(p).innerText = 'Be Trybe!';
+
+      let thirdDiv = document.createElement('div');
+
+      firstDiv.appendChild(thirdDiv).className = 'left-content';
+
+      let fourthDiv = document.createElement('div');
+
+      firstDiv.appendChild(fourthDiv).className = 'right-content';
+
+      let image = document.createElement('img');
+      image.src = 'https://picsum.photos/200';
+
+      thirdDiv.appendChild(image).className = 'small-image';
+
+      let ul = document.createElement('ul');
+
+      fourthDiv.appendChild(ul);
+
+      for (i = 1; i < 11; i++) {
+        let item = i;
+        
+        let li = document.createElement('li');
+        li.innerText = item;
+
+        ul.appendChild(li);
+      }
+
+      let header1 = document.createElement('h3');
+
+      firstDiv.appendChild(header1).innerText = 'Be';
+
+      let header2 = document.createElement('h3');
+
+      firstDiv.appendChild(header2).innerText = 'Trybe!';
+
+      let header3 = document.createElement('h3');
+
+      firstDiv.appendChild(header3).innerText = '#VQV';
+
+      text.className = 'title';
+
+      header1.className = 'description';
+      header2.className = 'description';
+      header3.className = 'description';
+
+      firstDiv.removeChild(thirdDiv);
+
+      document.querySelector('.right-content').style.marginRight = 'auto';
+
+      document.querySelector('.main-content').style.backgroundColor = 'green';
+
+      ul.removeChild(ul.childNodes[9]);
+      ul.removeChild(ul.childNodes[8]);
+    </script>
+  </body>
+</html>
