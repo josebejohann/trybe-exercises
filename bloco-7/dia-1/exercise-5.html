@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <p id="paragraph">0</p>
+    <button id="click-button">Clique-me!</button>
+    <script>
+      document.getElementById('click-button').addEventListener('click', () => {
+        const paragraph = document.getElementById('paragraph');
+        const clickCount = parseInt(paragraph.textContent, 10) + 1;
+
+        paragraph.textContent = clickCount;
+      });
+    </script>
+  </body>
+</html>
