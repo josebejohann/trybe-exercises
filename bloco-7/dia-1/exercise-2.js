@@ -6,4 +6,6 @@ const compareNumbers = (a, b) => {
 
 oddsAndEvens.sort(compareNumbers);
 
-console.log(`Os números ${oddsAndEvens} se encontram ordenados de forma crescente!`);
+console.log(
+  `Os números ${oddsAndEvens} se encontram ordenados de forma crescente!`
+);
