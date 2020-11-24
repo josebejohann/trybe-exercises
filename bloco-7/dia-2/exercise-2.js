@@ -39,3 +39,15 @@ const assignObjects = (destiny, object1, object2, object3) =>
   Object.assign(destiny, object1, object2, object3);
 
 assignObjects(allLessons, { lesson1, lesson2, lesson3 });
+
+const allStudents = (object) => {
+  let students = 0;
+
+  for (let i in object) {
+    students += object[i].numeroEstudantes;
+  }
+
+  return students;
+};
+
+allStudents(allLessons);
