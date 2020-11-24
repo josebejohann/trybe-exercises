@@ -21,32 +21,14 @@ const lesson3 = {
 const changeObject = (object, key, value) => (object[key] = value);
 changeObject(lesson2, 'turno', 'manhã');
 
-const listKeys = (object) => {
-  for (let i in object) {
-    return i;
-  }
-};
+const listKeys = (object) => Object.keys(object);
 
 listKeys(lesson1);
 
-const objectLength = (object) => {
-  let length = 0;
+const objectLength = (object) => Object.keys(object).length;
 
-  for (let i in object) {
-    if (object[i]) {
-      length += 1;
-    }
-  }
+console.log(objectLength(lesson2));
 
-  return length;
-};
+const listValues = (object) => Object.values(object);
 
-objectLength(lesson2);
-
-const listValues = (object) => {
-  for (let i in object) {
-    return object[i];
-  }
-};
-
-listValues(lesson3);
+console.log(listValues(lesson3));
