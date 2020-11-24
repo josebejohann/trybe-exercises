@@ -18,6 +18,8 @@ const lesson3 = {
   turno: 'noite',
 };
 
+const allLessons = {};
+
 const changeObject = (object, key, value) => (object[key] = value);
 changeObject(lesson2, 'turno', 'manhã');
 
@@ -27,8 +29,13 @@ listKeys(lesson1);
 
 const objectLength = (object) => Object.keys(object).length;
 
-console.log(objectLength(lesson2));
+objectLength(lesson2);
 
 const listValues = (object) => Object.values(object);
 
-console.log(listValues(lesson3));
+listValues(lesson3);
+
+const assignObjects = (destiny, object1, object2, object3) =>
+  Object.assign(destiny, object1, object2, object3);
+
+assignObjects(allLessons, { lesson1, lesson2, lesson3 });
