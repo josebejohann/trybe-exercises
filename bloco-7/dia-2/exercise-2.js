@@ -51,3 +51,11 @@ const allStudents = (object) => {
 };
 
 allStudents(allLessons);
+
+const handleObjectsValues = (object, position) => {
+  const value = Object.values(object);
+
+  return value[position];
+};
+
+console.log(handleObjectsValues(lesson3, 0));
