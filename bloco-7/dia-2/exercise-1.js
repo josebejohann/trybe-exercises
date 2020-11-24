@@ -42,4 +42,4 @@ customerInfo(order);
 const orderModifier = (order) =>
   `Olá ${order.name}, o total do seu pedido de muzzarella, calabresa e ${order.order.drinks.coke.type} é ${order.payment.total}.`;
 
-console.log(orderModifier(order));
+orderModifier(order);
