@@ -28,3 +28,17 @@ const listKeys = (object) => {
 };
 
 listKeys(lesson1);
+
+const objectLength = (object) => {
+  let length = 0;
+
+  for (let i in object) {
+    if (object[i]) {
+      length += 1;
+    }
+  }
+
+  return length;
+};
+
+console.log(objectLength(lesson2));
