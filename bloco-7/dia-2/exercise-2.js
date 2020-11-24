@@ -58,4 +58,14 @@ const handleObjectsValues = (object, position) => {
   return value[position];
 };
 
-console.log(handleObjectsValues(lesson3, 0));
+handleObjectsValues(lesson3, 0);
+
+const verifyPairs = (object, key, value) => {
+  if (object[key] === value) {
+    return true;
+  }
+
+  return false;
+};
+
+verifyPairs(lesson2, 'turno', 'manhã');
