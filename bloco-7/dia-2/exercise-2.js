@@ -41,4 +41,12 @@ const objectLength = (object) => {
   return length;
 };
 
-console.log(objectLength(lesson2));
+objectLength(lesson2);
+
+const listValues = (object) => {
+  for (let i in object) {
+    return object[i];
+  }
+};
+
+listValues(lesson3);
