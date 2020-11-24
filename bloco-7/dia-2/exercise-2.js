@@ -20,3 +20,11 @@ const lesson3 = {
 
 const changeObject = (object, key, value) => (object[key] = value);
 changeObject(lesson2, 'turno', 'manhã');
+
+const listKeys = (object) => {
+  for (let i in object) {
+    return i;
+  }
+};
+
+listKeys(lesson1);
