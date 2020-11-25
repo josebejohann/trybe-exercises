@@ -60,7 +60,7 @@ const handleObjectsValues = (object, position) => {
 
 handleObjectsValues(lesson3, 0);
 
-const verifyPairs = (object, key, value) => {
+const verifyPair = (object, key, value) => {
   if (object[key] === value) {
     return true;
   }
@@ -68,4 +68,19 @@ const verifyPairs = (object, key, value) => {
   return false;
 };
 
-verifyPairs(lesson2, 'turno', 'manhã');
+verifyPair(lesson2, 'turno', 'manhã');
+
+const numberOfStudents = (object) => {
+  const value = Object.values(object);
+  let sum = 0;
+
+  for (let i in value) {
+    if (value[i]['materia'] === 'Matemática') {
+      sum += value[i].numeroEstudantes;
+    }
+  }
+
+  return sum;
+};
+
+numberOfStudents(allLessons);
