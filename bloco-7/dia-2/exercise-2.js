@@ -72,15 +72,37 @@ verifyPair(lesson2, 'turno', 'manhã');
 
 const numberOfStudents = (object) => {
   const value = Object.values(object);
-  let sum = 0;
+  let students = 0;
 
   for (let i in value) {
     if (value[i]['materia'] === 'Matemática') {
-      sum += value[i].numeroEstudantes;
+      students += value[i].numeroEstudantes;
     }
   }
 
-  return sum;
+  return students;
 };
 
 numberOfStudents(allLessons);
+
+const teacherRelatory = (object, teacher) => {
+  const value = Object.values(object);
+  let classes = [];
+  let students = 0;
+
+  for (let i in value) {
+    if (value[i]['professor'] === teacher) {
+      classes.push(value[i].materia);
+
+      students += value[i].numeroEstudantes;
+    }
+  }
+
+  return {
+    professor: teacher,
+    aulas: classes,
+    estudantes: students,
+  };
+};
+
+teacherRelatory(allLessons, 'Maria Clara');
