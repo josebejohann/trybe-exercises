@@ -9,7 +9,11 @@ function myFizzBuzz(num) {
 }
 
 assert.strictEqual(myFizzBuzz(15), 'fizzbuzz');
+
 assert.strictEqual(myFizzBuzz(3), 'fizz');
+
 assert.strictEqual(myFizzBuzz(5), 'buzz');
+
 assert.strictEqual(myFizzBuzz(7), 7);
+
 assert.strictEqual(myFizzBuzz('Trybe'), false);
